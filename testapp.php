@@ -29,7 +29,7 @@ function storeDataIntoRedis($fakeDataset, $redis){
     $username = $fakeDataset['username'];
     $redis->set("user_object_" .$userId, json_encode(['username' => $username, 'useremail' => $useremail]));
     $retrivedFromRedis = json_decode($redis->get("user_object_" .$userId));
-    if($retrivedFromRedis['username'] == $username) {
+    if($retrivedFromRedis->username == $username) {
         echo 'data stored successfully into redis'.PHP_EOL;
         return true;
     }
