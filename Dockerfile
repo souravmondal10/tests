@@ -2,7 +2,6 @@ FROM ubuntu
 
 MAINTAINER Sourav Mondal "souravmondal10@gmail.com"
 
-
 WORKDIR /var/www/html
 
 RUN apt-get update
